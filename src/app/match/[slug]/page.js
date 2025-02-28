@@ -3,8 +3,6 @@ import React from 'react'
 async function page({ params }) {
   const apiKey=process.env.NEXT_PUBLIC_CRICKET_API_KEY;
   const res = (await params).slug
-  // const apiKey = process.env.NEXT_CRICKET_API_KEY;
-
    const response = await fetch(`https://api.cricapi.com/v1/match_info?apikey=${apiKey}&id=${res}`);
   const datas = await response.json()
   const data=datas.data

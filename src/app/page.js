@@ -1,12 +1,10 @@
 
 import MatchCard from "./components/match";
-// import { matchdata } from "./data/match/data";
 import Loader from "./components/loader";
 
 export default async function Home() {
 
   const apiKey=process.env.NEXT_PUBLIC_CRICKET_API_KEY;
-  // console.log(apiKey);
   
 
   const res = await fetch(`https://api.cricapi.com/v1/currentMatches?apikey=${apiKey}&offset=0`);
@@ -17,7 +15,6 @@ export default async function Home() {
       {!data && <Loader />}
       <section className="py-3 px-4 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6">
         {data.data.map((data,idx)=><MatchCard data={data} key={idx}/>)}
-        {/* {matchdata.map((data, idx) => <MatchCard data={data} key={idx} />)} */}
       </section>
     </div>
   );

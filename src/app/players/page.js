@@ -45,7 +45,6 @@ function page() {
         const data = await res.json()
         setmoredata(data.data)
         setloading(false)
-        // console.log(data.data);
 
     }
     return (

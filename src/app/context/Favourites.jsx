@@ -19,13 +19,13 @@ JSON.parse(localStorage.getItem("match")) || []
         }
         setmatch([...match,item])
         toast.success("Match added sucessfully")
-        // console.log(match);
+     
 
     }
     const removefromFavourites = (item) => {
         setmatch((prev)=>prev.filter(match => match!==item))
         toast.success("Match removed sucessfully")
-        // console.log(match);
+  
     }
     return (
         <Context.Provider value={{ match, addtoFavourites,removefromFavourites }}>

@@ -30,7 +30,7 @@ function page() {
   return (
     <div className='container text-center p-4 mx-auto min-h-[100vh]'>
       <h1 className="text-3xl font-bold text-center p-2">Favourite Matches</h1>
-      {matches.length==0 && <Loader />}
+      {matches.length==0 && <div className='p-6 text-center mx-auto'> <h2>NO favourite match</h2></div>}
       <section className="py-3 px-4 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6">
         {matches.length!=0 &&
           matches.map((match, idx) => (

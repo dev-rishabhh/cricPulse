@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const Context = createContext();
 
 export const ContextProvider = ({ children }) => {
-    const [match, setmatch] = useState(null);
+    const [match, setmatch] = useState([]);
     useEffect(() => {
         const data = (JSON.parse(localStorage.getItem("match")) || [])
         setmatch(data)
